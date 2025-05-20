@@ -8,12 +8,11 @@ body.modal-open {
   overflow: hidden;
 }
 
-.container{
-  position: relative;
-  padding: 40px;
-  top: 80px;
-  right: 90px;
+.container {
+  margin-top: 100px; /* space for fixed header */
+  padding: 40px 20px;
 }
+
 
 /* SEARCH BAR */
 input.form-control {
