@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <link rel="stylesheet" href="register.css">
+  <link rel="icon" href="ICON.png" type="image/png">
+</head>
+<body>
+  <div class="container">
+    <form class="form">
+      <h2>Registration</h2>
+
+      <label>Full Name</label>
+      <div class="row">
+        <input type="text" placeholder="Last Name" required>
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="M.I." maxlength="1">
+      </div>
+
+      <label>Student ID Number</label>
+      <input type="text" placeholder="Enter your Student ID" required>
+
+      <label>School Email</label>
+      <input type="email" placeholder="Enter your School Email" required>
+
+      <label>Password</label>
+      <div class="password-wrapper">
+        <input type="password" placeholder="Create a Password" required>
+        <span class="eye"></span>
+      </div>
+      <p class="note">Password must contain at least 8 characters, including uppercase, lowercase, numbers, and special characters.</p>
+
+      <label>Department/Program</label>
+      <input type="text" placeholder="Enter your Department or Program" required>
+
+      <div class="row-label">
+        <label for="yearLevel">Year Level</label>
+        <label for="contactNumber">Contact Number</label>
+      </div>
+      <div class="row">
+        <select id="yearLevel" name="yearLevel" required>
+          <option value="">Select Year Level</option>
+          <option value="1">1st Year</option>
+          <option value="2">2nd Year</option>
+          <option value="3">3rd Year</option>
+          <option value="4">4th Year</option>
+        </select>
+        <input type="text" id="contactNumber" name="contactNumber" placeholder="Enter Contact Number" required>
+      </div>      
+
+      <div class="checkbox">
+        <input type="checkbox" required>
+        <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Device Lending Policy</a></span>
+      </div>
+
+      <button type="submit">Register</button>
+
+      <p class="login">Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+</body>
+</html>
+

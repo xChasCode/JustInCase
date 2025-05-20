@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+AHAHAHHHAH
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustInCase</title>
+    <link rel="shortcut icon" href="../assests/JustInCase Logo 1.png" type="png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="fragments.css">
+    <link rel="stylesheet" href="transactions.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/db44558fb6.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+  <div id="sidebar-container"></div>
+  
+<!-- TRANSACTIONS -->
+ <div class="container">
+  <h2 style="font-weight: 700;">Transactions</h2>
+
+  <input type="text" class="form-control" placeholder="Search Transaction" />
+
+<!-- DROPDOWNS -->
+  <div class="dropdown">
+    <select class="form-select">
+      <option selected disabled>Status</option>
+      <option value="1">Active</option>
+      <option value="2">D</option>
+      <option value="3">All Status</option>
+    </select>
+
+    <select class="form-select">
+      <option selected disabled>Date</option>
+      <option value="1">Today</option>
+      <option value="2">Linux</option>
+      <option value="3">Date(All)</option>
+    </select>
+  </div>
+ </div>
+ <!-- END DROPDOWNS -->
+
+ <!-- TABS AND TABLES -->
+
+ <ul class="nav nav-underline mt-5 ps-5 custom-tabs" role="tablist">
+  <li class="tabs-item">
+    <a class="nav-link active" data-bs-toggle="tab" href="#active-tab" role="tab">Active</a>
+  </li>
+  <li class="tabs-item">
+    <a class="nav-link"  data-bs-toggle="tab" href="#reservations-tab" role="tab">Reservations</a>
+  </li>
+  <li class="tabs-item">
+    <a class="nav-link"  data-bs-toggle="tab" href="#history-tab" role="tab">History</a>
+  </li>
+</ul>
+
+<!-- ACTIVE TAB -->
+ <div class="tab-content mt-3">
+  <div class="tab-pane fade show active" id="active-tab" role="tabpanel">
+    <table class="device-table">
+      <tr class="table-header">
+        <th>DEVICE</th>
+        <th>BORROWED</th>
+        <th>DUE TIME</th>
+        <th>STATUS</th>
+        <th style="text-align: right; padding-right: 50px;">ACTIONS</th>
+      </tr>
+      <tr>
+          <td class="device-cell">
+          <div class="image-side">
+            <img src="../assests/mcbook.jpg" alt="" srcset="">
+          </div>
+          <div class="device-text">
+          <div class="device-info">MacBook Pro 14”</div>
+          <div class="device-id">ID: 2034848</div>
+          </div>
+        </td>
+        <td class="date-borrowed">May 10, 2025</td>
+        <td class="due-time">2:00 PM</td>
+        <td><span class="status-active">Active</span></td>
+        <td><button class="return-btn">Return Device</button></td>
+      </tr>
+      <tr>
+        <td class="device-cell">
+          <div class="image-side">
+            <img src="../assests/mcbook.jpg" alt="" srcset="">
+          </div>
+          <div class="device-text">
+          <div class="device-info">MacBook Pro 14”</div>
+          <div class="device-id">ID: 2034848</div>
+          </div>
+        </td>
+        <td class="date-borrowed">May 10, 2025</td>
+        <td class="due-time">2:00 PM</td>
+        <td><span class="status-active">Active</span></td>
+        <td><button class="return-btn">Return Device</button></td>
+      </tr>
+    </table>
+  </div>
+  <!-- END ACTIVE TAB -->
+
+  <!-- RESERVATION TAB -->
+  <div class="tab-pane fade" id="reservations-tab" role="tabpanel">
+    <table class="device-table">
+      <tr class="table-header">
+        <th>DEVICE</th>
+        <th>REQUEST DATA</th>
+        <th>DUE TIME</th>
+        <th>STATUS</th>
+        <th style="text-align: right; padding-right: 50px;">ACTIONS</th>
+      </tr>
+      <tr>
+        <td class="device-cell">
+          <div class="image-side">
+            <img src="../assests/mcbook.jpg" alt="" srcset="">
+          </div>
+          <div class="device-text">
+          <div class="device-info">MacBook Pro 14”</div>
+          <div class="device-id">ID: 2034848</div>
+          </div>
+        </td>
+        <td class="date-borrowed">May 10, 2025</td>
+        <td class="due-time">2:00 PM</td>
+        <td><span class="status-active">Active</span></td>
+      </tr>
+      <tr>
+        <td class="device-cell">
+          <div class="image-side">
+            <img src="../assests/mcbook.jpg" alt="" srcset="">
+          </div>
+          <div class="device-text">
+          <div class="device-info">MacBook Pro 14”</div>
+          <div class="device-id">ID: 2034848</div>
+          </div>
+        </td>
+        <td class="date-borrowed">May 10, 2025</td>
+        <td class="due-time">2:00 PM</td>
+        <td><span class="status-active">Active</span></td>
+        <td><button class="details-btn">View Details</button>
+          <button class="cancel-btn">Cancel</button></td>
+      </tr>
+    </table>
+  </div>
+  <!-- END RESERVATION TAB -->
+
+  <!-- HISTORY TAB -->
+  <div class="tab-pane fade" id="history-tab" role="tabpanel">
+    <table class="device-table">
+      <tr class="table-header">
+        <th>DEVICE</th>
+        <th>CHECKOUT DATE</th>
+        <th>RETURN DATE</th>
+        <th>STATUS</th>
+        <th style="text-align: right; padding-right: 50px;">ACTIONS</th>
+      </tr>
+      <tr>
+        <td class="device-cell">
+          <div class="image-side">
+            <img src="../assests/mcbook.jpg" alt="" srcset="">
+          </div>
+          <div class="device-text">
+          <div class="device-info">MacBook Pro 14”</div>
+          <div class="device-id">ID: 2034848</div>
+          </div>
+        </td>
+        <td class="date-borrowed">May 10, 2025</td>
+        <td class="date-return">May 2, 2025</td>
+        <td><span class="status-active">Active</span></td>
+        <td><button class="details-btn">View Details</button></td>
+      </tr>
+      <tr>
+       <td class="device-cell">
+          <div class="image-side">
+            <img src="../assests/mcbook.jpg" alt="" srcset="">
+          </div>
+          <div class="device-text">
+          <div class="device-info">MacBook Pro 14”</div>
+          <div class="device-id">ID: 2034848</div>
+          </div>
+        </td>
+        <td class="date-borrowed">May 10, 2025</td>
+        <td class="date-return">May 2, 2025</td>
+        <td><span class="status-active">Active</span></td>
+        <td><button class="details-btn">View Details</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<!-- END  HISTORY TAB -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+     document.addEventListener('DOMContentLoaded', () => {
+    fetch('fragments.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Failed to load sidebar-modals.html');
+        return response.text();
+      })
+      .then(html => {
+        console.log(html);
+        document.getElementById('sidebar-container').innerHTML = html;
+
+
+        const togglemenu = document.getElementById('menu-icon');
+        const sidebar = document.getElementById('sidebar');
+
+        togglemenu.addEventListener('click', e => {
+          e.stopPropagation();
+          sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', e => {
+          const isClickInside = sidebar.contains(e.target) || togglemenu.contains(e.target);
+          if (!isClickInside) {
+            sidebar.classList.remove('active');
+          }
+          if (e.target.closest('.nav-item')) {
+            sidebar.classList.remove('active');
+          }
+        });
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById('sidebar-container').textContent = 'Failed to load sidebar.';
+      });
+  });
+
+
+
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

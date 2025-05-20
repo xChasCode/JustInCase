@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display';
+}
+body.modal-open {
+  overflow: hidden;
+}
+
+/* DEVICE CATALOG CONTENTSS */
+
+.container{
+  position: relative;
+  padding: 40px;
+  top: 80px;
+  right: 90px;
+}
+
+/* SEARCH BAR */
+input.form-control {
+  position: relative;
+  left: 60%;
+  top: 40px;
+  width: 50%;
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: none;
+}
+/* END SEARCH BAR */
+
+/* DROPDOWN */
+.dropdown select.form-select {
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+
+.dropdown{
+  position: relative;
+  display: flex;
+  gap: 5px;
+  width: 50%;
+}
+/* END DROPDOWN */
+
+/* CARD */
+.card-container{
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  top: 70px;
+  width: 30rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  border: none !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.card-image {
+  height: auto;
+  background-color: #f3f4f6;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.specs {
+  font-size: 15spx;
+  font-weight: 700;
+  color: #374151;
+  list-style: none;
+  margin-bottom: 0.75rem;
+}
+
+.specs li {
+  margin-bottom: 0.25rem;
+}
+
+.status {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.status.available {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem; 
+  justify-content: flex-start; 
+  width: fit-content;
+ 
+}
+
+.buttons .details {
+  flex: 1;
+  min-width: 100px;
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+  font-weight: 700; 
+  border: 1px solid #0D6EFF;
+  color: #0D6EFF;
+  background-color: white;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.buttons .details:hover {
+  background-color: #0D6EFF;
+  color: white;
+}
+
+.buttons .reserve {
+  flex: 1;
+  min-width: 100px;
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+  font-weight: 700; 
+  border: none;
+  color: white;
+  background-color: #0D6EFF;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  margin-right:90px; 
+}
+
+.buttons .reserve:hover {
+  background-color: white;
+  color: #0D6EFF;
+  border: 1px solid #0D6EFF;
+}
+
+/* END CARD */
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;   
+    z-index: 2000;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 600px;
+    max-width: 40%;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    padding-bottom: 4rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: fixed;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+  }
+  
+  .modal-content label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .modal-content textarea,
+  .modal-content select,
+  .modal-content input[type="time"] {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .time-group {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .checkbox {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .checkbox a{
+    color: #2563eb;
+  }
+  
+  .buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  
+  .buttons .submit {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    flex: 1;
+    min-width: 76%;
+    box-sizing: border-box;
+  }
+
+  .buttons .cancel{
+    border-color: #2563eb;
+    border-style: solid;
+    color: #2563eb;
+    padding: 0.7rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    flex: 1;
+    min-width: 20%;
+    box-sizing: border-box;
+  }
+  /* END MODAL */
+
+  /* RESPONSIVE SHIT */
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 1024px) {
+  .container {
+    padding: 20px;
+    right: 0;
+    margin-left: 0;
+  }
+
+  #sidebar {
+    width: 240px;
+    left: -240px;
+  }
+
+  #sidebar.active {
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  input.form-control {
+    width: 100% !important;
+    left: 0 !important;
+    top: 20px !important;
+    max-width: 100%;
+  }
+
+  .dropdown {
+    width: 100% !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .buttons {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
+  .buttons .details,
+  .buttons .reserve {
+    flex: 1 1 100% !important;
+    min-width: unset !important;
+    margin-right: 0 !important;
+    max-width: 300px;
+  }
+
+  .modal-content {
+    width: 90% !important;
+    max-width: 100% !important;
+    padding: 1.5rem !important;
+  }
+
+  .time-group {
+    flex-direction: column !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 1rem !important;
+  }
+
+@media (max-width: 480px) {
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons .submit,
+  .buttons .cancel {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+  .buttons .reserve {
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+}
+@media (max-width: 768px) {
+  input.form-control {
+    position: static !important; 
+    margin-top: 1rem;
+    margin-bottom: 1rem;           
+  }
+}
+
+@media (max-width: 768px) {
+  /* Fix search bar */
+  input.form-control {
+    position: static !important;
+    width: 100% !important;
+    margin-top: 1rem;
+    left: auto !important;
+    top: auto !important;
+  }
+}

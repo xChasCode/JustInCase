@@ -1,0 +1,558 @@
+/* Reset and Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display', 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-padding-top: 100px; /* adjust based on nav height */
+    scroll-behavior: smooth;
+  }
+  
+
+/* Global Colors */
+:root {
+    --primary-blue: #0066FF;
+    --primary-blue-alt: #3083FF;
+    --primary-yellow: #FFFF55;
+    --primary-yellow-alt: #FFFFAA;
+    --black: #0C0C0C;
+    --dark-gray: #F8FAFC;
+    --light-gray: #F5F5F8;
+    --white: #FFFFFF;
+}
+
+/* Body */
+body {
+    background-color: var(--primary-blue-alt);
+    color: var(--black);
+    line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+    background-color: var(--white);
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+/* Link Styling */
+.links {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Display';
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+.links:hover {
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.links.active {
+    background-color: var(--primary-blue);
+    color: white;
+    border-radius: 8px;
+}
+
+/* Buttons */
+.nav-button {
+    display: flex;
+    gap: 15px;
+}
+
+/* Login Button */
+.btn-link1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Display';
+    background-color: var(--white);
+    border: 2px solid rgb(88, 85, 85);
+    border-radius: 12px;
+    width: 100px;
+    height: 50px;
+
+ 
+}
+
+.btn-link1:hover {
+    border: 2px solid rgb(198, 193, 193);
+    
+    transition: all 0.3s ease;
+}
+
+/* Get Started Button */
+.btn-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Display';
+    background-color: var(--primary-blue);
+    border-radius: 12px;
+    width: 120px;
+    height: 50px;
+}
+
+/* Branding Section */
+.branding {
+    background-color: var(--primary-blue-alt);
+    color: white;
+    text-align: center;
+    padding: 180px 0 120px;
+}
+
+.branding h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    
+}
+
+.branding p {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+/* Borrow Button */
+.branding .btn-borrow {
+    background-color: var(--primary-yellow);
+    color: black;
+    padding: 14px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.branding .btn-borrow:hover {
+    background-color: #fefefe;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Section */
+.content-section {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.content-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+}
+
+.text {
+    flex: 1 1 55%;
+    min-width: 300px;
+    padding-right: 60px;
+}
+
+.text h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    color: #222;
+    font-weight: 600;
+}
+
+.text p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.icon-placeholder {
+    flex: 1 1 35%;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 120px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav-links {
+        margin: 10px 0;
+    }
+
+    .nav-button {
+        margin-top: 10px;
+    }
+
+    .branding {
+        padding: 120px 0 100px;
+    }
+
+    .text {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .branding h1 {
+        font-size: 48px;
+    }
+
+    .branding p {
+        font-size: 20px;
+    }
+
+    .content-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text {
+        margin-bottom: 40px;
+    }
+}
+
+/* Why Choose Section */
+.why-choose {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #ffffff;
+    z-index: 1000;
+}
+
+.why-choose h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.highlight {
+    color: #0066ff; /* blue */
+}
+
+.highlight-yellow {
+    color: var(--primary-yellow); /* yellow */
+}
+
+/* Card Container */
+.choose-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Each Card */
+.choose-card {
+    background-color: #f8fafc;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px 25px;
+    width: 300px;
+    text-align: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.choose-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+/* Icon Circle */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #0066ff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 20px;
+    z-index: 1000;
+}
+
+/* Card Text */
+.choose-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    z-index: 1000;
+}
+
+.choose-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    Z-index: 1000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .choose-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* How It Works */
+.how-it-works {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    z-index: 1000;
+}
+
+.steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 1000;
+}
+
+.step {
+    max-width: 300px;
+    z-index: 1000;
+}
+
+.step-icon {
+    background-color: #0066ff;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin: 0 auto 20px;
+    z-index: 1000;
+}
+
+.step h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+.step p {
+    font-size: 16px;
+    color: #555;
+    z-index: 1000;
+}
+
+/* Tailored Section */
+.tailored {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.user-types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.user-box {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    width: 45%;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.user-box h3 {
+    margin-bottom: 20px;
+}
+
+.user-box ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.user-box ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.user-box ul li::before {
+    content: '✔️';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.btn-student, .btn-professor {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+}
+
+.btn-student {
+    background-color: #0066ff;
+}
+
+.btn-professor {
+    background-color: var(--primary-yellow);
+    color: black;
+}
+
+/* CTA Section */
+.cta {
+    background-color: #0066ff;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-cta {
+    background-color: var(--primary-yellow);
+    color: black;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Footer */
+.footer {
+    background-color: #0c0c0c;
+    color: white;
+    padding: 60px 20px 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-left {
+    max-width: 400px;
+}
+
+.footer-left p {
+    margin-top: 20px;
+    font-size: 15px;
+    color: #cccccc;
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+}
+
+.footer-links h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .steps-container, .user-types, .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+}

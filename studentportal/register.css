@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Main Container */
+.container, .wrapper {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+  max-width: 470px;
+  width: 100%;
+}
+
+/* Header */
+.wrapper h1,
+.container h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Input Box Container */
+.input-box {
+  margin-bottom: 20px;
+}
+
+/* Inputs & Selects */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin: 10px 0 6px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #0C0C0C;
+}
+
+/* Side-by-side layout (Year Level & Contact Number) */
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.row input,
+.row select {
+  flex: 1;
+}
+
+.row-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.row-label label {
+  flex: 1;
+}
+
+/* Checkbox Terms */
+.checkbox {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.checkbox a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Button */
+button,
+.wrapper .btn {
+  background: #007bff;
+  color: white;
+  padding: 14px;
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+/* Login Link */
+.login {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.login a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Password Eye Toggle */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  width: 100%;
+}
+
+.password-wrapper .eye {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+
+/* Notes or Extra Text */
+.note {
+  font-size: 12px;
+  color: #555;
+  margin-top: 6px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .row,
+  .row-label {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .container {
+    padding: 20px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+
+/*  */
+
+
+
+

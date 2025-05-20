@@ -1,0 +1,71 @@
+    <!-- NAVBAR & SIDEBAR-->
+    
+    <nav id="header">
+      <img src="../assests/dots.png" alt="menu" id="menu-icon">
+       <h3 id="user">Hello, User!</h3>
+    </nav>
+        
+    <div id="sidebar">
+      <div class="logo-text">
+        <img src="../assests/JustInCase Logo 1.png" alt="logo" width="45px" height="34px" style="padding-right: 10px;">
+       <h2 style="font-weight: 700;">Just<span style="color: #FF0;">In</span>Case</h2>
+      </div>
+
+    <hr  />
+    <div class="nav-menu">
+    <a href="./device-catalog.html" class="nav-item"><i class="fa-solid fa-desktop"></i>Device Catalog</a>
+    <a href="./transactions.html" class="nav-item"><i class="fa-solid fa-receipt"></i>Transactions</a>
+    
+    <hr />
+    
+    <a href="#notificationPopup" class="nav-item"><i class="fa-solid fa-bell"></i>Notifications</a>
+    
+    <hr />
+    
+    <a href="#user-agreement" class="nav-item"><i class="fa-solid fa-book-bookmark"></i>User Agreement</a>
+    <a href="#account-settings" class="nav-item"><i class="fa-solid fa-user"></i>Account Settings</a>
+    <a href="#terms-conditions" class="nav-item"><i class="fa-solid fa-newspaper"></i>Terms and Conditions</a>
+    <a href="#FAQ" class="nav-item"><i class="fa-solid fa-circle-question"></i>FAQ</a>
+    
+    <hr />
+
+  <div class="logout">
+        <a href="#" class="logoutbtn"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+  </div>
+</div>
+</div>
+<!-- NAVBAR & SIDEBAR-->
+
+<!-- NOTIFICATION MODAL -->
+<div id="notificationPopup" class="notification-popup hidden">
+  <div class="notification-header">
+    <span>Inbox <span class="badge">2</span></span>
+    <button onclick="markAllAsRead()" class="">Mark all as read</button>
+    <button onclick="archiveRead()">Archive read</button>
+  </div>
+
+  <div class="notification-item unread">
+    <span class="icon blue">🔵</span>
+    <div>
+      <strong>Device Return Reminder</strong>
+      <p>Your MacBook Pro 14” is due at 5:00 pm</p>
+    </div>
+  </div>
+
+  <div class="notification-item overdue">
+    <span class="icon red">🔺</span>
+    <div>
+      <strong>Return Overdue</strong>
+      <p>Your MacBook Pro 14” was due to return at 5:00 pm.</p>
+    </div>
+  </div>
+
+  <div class="notification-item available">
+    <span class="icon green">🟢</span>
+    <div>
+      <strong>Macbook Pro 14” is now available for reservation</strong>
+      <p>Reserve the device now!</p>
+    </div>
+  </div>
+</div>
+
